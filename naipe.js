@@ -2,22 +2,21 @@ let cartas =  parseInt(prompt("Digite o numero de cartas desejadas: "))
 
 for( let i = 0; i < cartas; i++ ){
 
-    let numeros = Math.random() * 10 //0,1,2,3 
-
-    console.log(numeros)
-
-    let naipe = Math.random() * 3 //0,1,2,3 
-
+    let naipe = Math.round( Math.random() * 3 ) 
     if(naipe == 0){
-       naipe = "copas"
+       naipe = "Copas"
     }else if(naipe == 1){
-       naipe = "paus"
+       naipe = "Paus"
     }else if (naipe == 2){
-        naipe == "Espadas"
+        naipe = "Espadas"
     }else if (naipe == 3){
-        naipe == "Ouros"
+        naipe = "Ouros"
     }
-    console.log(naipe)
+
+    let num 
+    num = Math.round(Math.random() * 9 + 1) 
+
+    console.log(` A carta ${i} é : ${num} ${naipe}  `)
 
 
 }
